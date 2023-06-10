@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+//colors palette
+$first-color: #022B3A;
+$second-color: #1F7A8C;
+$third-color: #BFDBF7;
+$fourth-color: #E1E5F2;
+$fifth-color: #FFFFFF;
+
+
+//fonts
+@font-face {
+  font-family: "Infinity-Light";
+  src: url(../src/font/infinity-light.otf);
+}
+
+@font-face {
+  font-family: "Infinity-Regular";
+  src: url(../src/font/infinity-regular.otf);
+}
+
+@font-face {
+  font-family: "Infinity-Medium";
+  src: url(../src/font/infinity-medium.otf);
+}
+
+//global gradient property
+.gradient {
+  background-image: linear-gradient(to right bottom, #022b3a, #053949, #0a4758, #105668, #166577, #317488, #478399, #5c93aa, #81a6be, #a3bad0, #c3cfe1, #e1e5f2);
+}
+
+//global light property
+.light {
+  background-color: $fourth-color;
+}
+
+
+h1,h2, label{
+  font-family: 'Infinity-Medium';
+}
+
+h4,h5{
+  font-family: "Infinity-Regular";
+}
+
+p, footer{
+  font-family: "Infinity-Light";
+}
+
+a {
+  text-decoration: none;
+  font-family: "Infinity-Regular";
+}
+
+.cliccable-btn-2{
+  color: $fifth-color !important;
+  background-color: rgb(155, 0, 0) !important;
+}
+
+.cliccable-btn{
+  color: $fifth-color !important;
+  background-color: $second-color !important;
+}
+
+.cliccable-btn-2:hover{
+  background-color: rgb(198, 1, 1) !important;
+}
+
+.cliccable-btn:hover{
+  background-color: $first-color !important;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 12px 24px;
+  }
+}

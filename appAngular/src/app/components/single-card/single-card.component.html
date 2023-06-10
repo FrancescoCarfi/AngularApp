@@ -1,0 +1,30 @@
+<body>
+  <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="card my-5">
+      <img class="card-img-top" [src]="character?.image" [alt]="character?.name">
+      <div class="card-body">
+        <h5 class="card-title">{{ character?.name }}</h5>
+        <p class="card-text">Status: {{ character?.status }}</p>
+        <p class="card-text">Species: {{ character?.species }}</p>
+        <div class="d-flex flex-row align-items-center text-center">
+          <div>
+            <button class="btn cliccable-btn mx-2 my-1" (click)="addToFavorites()">Add to favorites</button>
+            <div *ngIf="alreadyAdded" class="text-danger">Already in favourites</div>
+            <div *ngIf="firstAdded" class="text-success">Added to favourites</div>
+          </div>
+          <div>
+            <button class="btn cliccable-btn-2 mx-2" (click)="removeFromFavorites()">Remove from favorites</button>
+            <div *ngIf="notInFavorites" class="text-danger">Not in favourites</div>
+            <div *ngIf="firstRemoved" class="text-success">Removed from favourites</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn cliccable-btn mx-3" routerLink="/listing">Listing</button>
+        <button class="btn cliccable-btn mx-3" routerLink="/favorites">Favourites</button>
+      </div>
+    </div>
+  </div>
+</body>

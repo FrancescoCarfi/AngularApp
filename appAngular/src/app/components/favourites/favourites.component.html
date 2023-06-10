@@ -1,0 +1,32 @@
+<div class="container-fluid  bg-bk">
+  <div class="container-md col-md-12 d-flex flex-column align-items-center justify-content-center bg-bk"
+    style="height: 100vh;">
+    <h2 class="text-center">Your Favourites</h2>
+    <div class="container" style="max-height: 500px; overflow-y: auto;">
+      <div *ngIf="hasFavorites(); else noFavorites">
+        <div class="row">
+          <div class="col-md-12" *ngFor="let favorite of favorites">
+            <div class="card mb-3 custom-card">
+              <div class="d-flex flex-column flex-md-row">
+                <img class="card-img-right mt-3 mt-md-0" [src]="favorite?.image" [alt]="favorite?.name">
+                <div class="card-body">
+                  <h5 class="card-title">{{ favorite?.name }}</h5>
+                  <p class="card-text">Status: {{ favorite?.status }}</p>
+                  <p class="card-text">Species: {{ favorite?.species }}</p>
+                  <button class="btn cliccable-btn-2" (click)="removeFavorite(favorite)">Rimuovi</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #noFavorites>
+        <p class="d-flex justify-content-center mt-3">Empty.</p>
+      </ng-template>
+    </div>
+    <div class="text-center mt-4">
+      <button class="btn cliccable-btn" routerLink="/home">Go to Home</button>
+      <button class="btn cliccable-btn mx-3" routerLink="/listing">Listing</button>
+    </div>
+  </div>
+</div>
