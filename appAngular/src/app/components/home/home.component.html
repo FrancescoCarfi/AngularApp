@@ -1,0 +1,95 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav id="top" class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand px-3">R&M</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link px-3 ml-2" (click)="scrollTo('Description')">Description</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 ml-2" (click)="scrollTo('Banners')">Banners</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 ml-2" routerLink="/listing">Listing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 ml-2" routerLink="/favorites">Favourites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 ml-2" (click)="logout()">Logout</a>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text px-1 d-none d-lg-flex">Hello, {{ userEmail }}</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section id="Description" class="d-flex align-items-center justify-content-center">
+    <div class=" bg container text-center">
+      <h1>Rick and Morty</h1>
+      <p>Prepare yourself for a mind-bending, sci-fi comedy that transcends dimensions and delivers non-stop
+        entertainment.</p>
+      <p>Join the charismatic, yet unpredictable, mad scientist Rick Sanchez and his timid grandson Morty Smith on a
+        rollercoaster ride through time, space, and infinite realities.</p>
+    </div>
+  </section>
+  <section id="Banners" class="d-flex align-items-center justify-content-center">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-md-6">
+          <img src="https://wallpaperaccess.com/full/637645.jpg" alt="Rick" class="img img-fluid">
+        </div>
+        <div class="bg col-md-6">
+          <h2>Unraveling the Mysteries of the Multiverse</h2>
+          <p>Delve into the mind-bending complexities of parallel universes, time travel, and alternate dimensions.</p>
+          <p>Witness the genius of Rick as he effortlessly navigates these realities, all while Morty tries to keep up
+            with the chaos and moral dilemmas that arise.</p>
+        </div>
+      </div>
+      <div class="row py-4">
+        <div class="bg order-2 order-md-1 col-md-6">
+          <h2>Morty's Coming-of-Age Journey</h2>
+          <p>Follow Morty's evolution from a timid teenager to a brave and resilient hero.</p>
+          <p>As he grapples with the consequences of his grandfather's actions and confronts his own insecurities, Morty
+            discovers hidden strengths and learns valuable life lessons along the way.</p>
+        </div>
+        <div class="order-1 order-md-2 col-md-6">
+          <img src="https://free4kwallpapers.com/uploads/originals/2022/06/08/rick-n-morty-wallpaper.jpg" alt="Morty"
+            class="img img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-light py-4">
+    <div class="container-footer">
+      <div class="column-footer links">
+        <h4>Contacts</h4>
+        <a class="nav-link" href="mailto:rick@example.com">rick@example.com</a>
+        <a class="nav-link" href="tel:+1234567890">+1 (234) 567-890</a>
+      </div>
+      <div class="column-footer links">
+        <h4>Sections</h4>
+        <a class="nav-link" (click)="scrollTo('Description')">Description</a>
+        <a class="nav-link" (click)="scrollTo('Banners')">Banners</a>
+      </div>
+      <div class="column-footer links">
+        <h4>Pages</h4>
+        <a class="nav-link" routerLink="/listing">Listing</a>
+        <a class="nav-link" routerLink="/favorites">Favourites</a>
+      </div>
+      <div class="column-footer links">
+        <h4>Other</h4>
+        <a class="nav-link" (click)="scrollTo('top')">Top ↑</a>
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </footer>
