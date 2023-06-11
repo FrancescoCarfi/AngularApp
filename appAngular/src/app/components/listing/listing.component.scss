@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+.bg-bk {
+    background: $fourth-color;
+}
+
+.margin {
+    background: $fourth-color;
+}
+
+* {
+    color: $first-color !important;
+}
+
+h2 {
+    font-family: 'Infinity-Medium';
+}
+
+h5 {
+    font-family: "Infinity-Regular";
+}
+
+p {
+    font-family: "Infinity-Light";
+}
