@@ -9,6 +9,11 @@ body {
     background: $fourth-color;
 }
 
+.navbar-brand {
+    max-height: 300px;
+    max-width: 150px;   
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color: $fifth-color;
 }
