@@ -7,11 +7,11 @@
       <input type="text" class="form-control" id="searchInput" [(ngModel)]="searchText" (input)="searchCharacters()">
     </div>
     <div class="row" style="max-height: 500px; overflow-y: scroll;">
-      <div class="col-md-3" *ngFor="let character of characters">
+      <div class="col-md-12" *ngFor="let character of characters">
         <a [routerLink]="['/listing', character.id]" class="card-link">
           <div class="card mb-3 custom-card">
-            <div class="d-flex flex-column">
-              <img class="card-img-top" [src]="character.image" [alt]="character.name">
+            <div class="d-flex flex-column flex-md-row">
+              <img class="card-img-right mt-3 mt-md-0" [src]="character.image" [alt]="character.name">
               <div class="card-body">
                 <h5 class="card-title">{{ character.name }}</h5>
                 <p class="card-text">Status: {{ character.status }}</p>

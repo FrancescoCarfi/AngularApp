@@ -1,31 +1,15 @@
-// @import '../../../styles.scss';
-
-$first-color: #022B3A;
-$second-color: #1F7A8C;
-$third-color: #BFDBF7;
-$fourth-color: #E1E5F2;
-$fifth-color: #FFFFFF;
+@import '../../../styles.scss';
 
 .bg-bk {
-    background: #E1E5F2;
+    background: $fourth-color;
 }
 
-.cliccable-btn{
-    color: $fifth-color !important;
-    background-color: $second-color !important;
-  }
-
-  .cliccable-btn:hover{
-    background-color: $first-color !important;
-  }
-
-
 .margin {
-    background: #E1E5F2;
+    background: $fourth-color;
 }
 
 * {
-    color: #022B3A !important;
+    color: $first-color !important;
 }
 
 h2 {
