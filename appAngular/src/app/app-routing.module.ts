@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'listing', component: ListingComponent, canActivate: [AuthGuard] }, // Pagina di elenco, accessibile solo per utenti autenticati
   { path: 'listing/:id', component: SingleCardComponent, canActivate: [AuthGuard] }, // Pagina di dettaglio di un elemento, accessibile solo per utenti autenticati
   { path: 'favorites', component: FavouritesComponent, canActivate: [AuthGuard] }, // Pagina dei preferiti, accessibile solo per utenti autenticati
-  { path: '**', redirectTo: '/error' } // Reindirizza a pagina di errore per tutte le altre route non definite
+  { path: '**', redirectTo: '/home' } // Reindirizza a pagina di errore per tutte le altre route non definite
 ];
 
 @NgModule({
